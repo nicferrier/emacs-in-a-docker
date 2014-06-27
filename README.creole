@@ -1,0 +1,4 @@
+This puts Emacs into a docker.
+
+I am sure this is going to be useful for tests and things like that.
+
