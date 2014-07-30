@@ -2,3 +2,8 @@ This puts Emacs into a docker.
 
 I am sure this is going to be useful for tests and things like that.
 
+=== Subdirectories ===
+
+Since there are an immediate load of things you might do with Dockers
+(run a daemon, run a batch in various ways, etc...) I'll put subdirs
+here with usable Dockerfiles for doing those things.
