@@ -5,8 +5,9 @@ RUN ["useradd", "-m", "emacs"]
 RUN mkdir /tmp/emacs1000
 RUN chmod g=,o= /tmp/emacs1000
 RUN chown emacs /tmp/emacs1000
-USER emacs
 ADD dot-emacs.el /home/emacs/.emacs
+RUN chown emacs /home/emacs/.emacs
+USER emacs
 # Publish the socket dir root, the socket dir is created under here
 VOLUME /tmp/emacs1000
 ENV HOME /home/emacs
