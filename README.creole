@@ -2,8 +2,24 @@ This puts Emacs into a docker.
 
 I am sure this is going to be useful for tests and things like that.
 
-=== Subdirectories ===
+== Subdirectories ==
 
 Since there are an immediate load of things you might do with Dockers
 (run a daemon, run a batch in various ways, etc...) I'll put subdirs
 here with usable Dockerfiles for doing those things.
+
+=== emacsd ===
+
+A docker with an Emacs daemon in it.
+
+{{{
+$ sudo docker.io run -d -v $(realpath sockets):/tmp/emacs1000 nicferrier/emacsd
+$ emacsclient -s sockets/sock/server -e  '(+ 1 1)'
+}}}
+
+
+== Other Emacs Dockerfiles ==
+
+[[http://github.com/nicferrier/elnode|Elnode]] has a few Dockerfiles
+to allow quick deployment. So far I've based all the Emacs Dockerfiles
+I've built on {{{emacsd}}}.
